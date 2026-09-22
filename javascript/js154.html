@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="datetime"></h2>
+
+<script>
+function updateDateTime() {
+    let now = new Date();
+    document.getElementById("datetime").textContent = now.toLocaleString();
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>

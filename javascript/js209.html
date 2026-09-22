@@ -1,0 +1,12 @@
+<input type="text" id="phone">
+<button onclick="checkPhone()">Check</button>
+
+<script>
+function checkPhone() {
+    let phone = document.getElementById("phone").value;
+
+    let pattern = /^[0-9]{10}$/;
+
+    alert(pattern.test(phone) ? "Valid Phone" : "Invalid Phone");
+}
+</script>

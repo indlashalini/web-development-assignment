@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Inheritance</h2>
+
+    <script>
+        class Animal {
+            speak() {
+                return "Animal makes a sound";
+            }
+        }
+
+        class Dog extends Animal {
+            bark() {
+                return "Dog barks";
+            }
+        }
+
+        let dog = new Dog();
+
+        document.write(dog.speak() + "<br>");
+        document.write(dog.bark());
+    </script>
+</body>
+</html>

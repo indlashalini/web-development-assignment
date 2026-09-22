@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form id="studentForm">
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    Age: <input type="number" id="age"><br><br>
+    Mobile: <input type="text" id="mobile"><br><br>
+    Password: <input type="password" id="password"><br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let age = document.getElementById("age").value;
+    let mobile = document.getElementById("mobile").value.trim();
+    let password = document.getElementById("password").value;
+
+    if (name === "" || email === "" || age === "" ||
+        mobile === "" || password === "") {
+        document.getElementById("message").innerHTML =
+            "All fields are required";
+        return;
+    }
+
+    if (!/^[A-Za-z ]+$/.test(name)) {
+        document.getElementById("message").innerHTML =
+            "Name must contain only alphabets";
+        return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById("message").innerHTML =
+            "Invalid email";
+        return;
+    }
+
+    if (age < 17 || age > 100) {
+        document.getElementById("message").innerHTML =
+            "Invalid age";
+        return;
+    }
+
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        document.getElementById("message").innerHTML =
+            "Mobile must contain 10 digits";
+        return;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("message").innerHTML =
+            "Password must contain at least 6 characters";
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Registration successful!";
+});
+</script>
+
+</body>
+</html>

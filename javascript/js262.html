@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="text">Welcome to JavaScript</h2>
+
+<button onclick="changeSize(16)">Small</button>
+<button onclick="changeSize(24)">Medium</button>
+<button onclick="changeSize(32)">Large</button>
+
+<script>
+
+function changeSize(size) {
+
+    document.getElementById("text").style.fontSize =
+        size + "px";
+
+    localStorage.setItem("fontSize", size);
+}
+
+window.onload = function() {
+
+    let size = localStorage.getItem("fontSize");
+
+    if (size) {
+        document.getElementById("text").style.fontSize =
+            size + "px";
+    }
+};
+
+</script>
+
+</body>
+</html>

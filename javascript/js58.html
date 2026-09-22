@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Merge Two Arrays</h2>
+<script>
+    let arr1 = prompt("Enter first array values separated by commas:")
+        .split(",").map(Number);
+    let arr2 = prompt("Enter second array values separated by commas:")
+        .split(",").map(Number);
+
+    let merged = arr1.concat(arr2);
+
+    document.write("Merged Array: " + merged);
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menu</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: navy;
+            color: white;
+            padding: 15px;
+            border: none;
+        }
+
+        .content {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 0 8px gray;
+            min-width: 150px;
+        }
+
+        .content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .content a:hover {
+            background: lightblue;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Dropdown Menu</h1>
+
+<div class="dropdown">
+    <button class="dropbtn">Courses ▼</button>
+
+    <div class="content">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Armstrong Number</h2>
+<script>
+    let num = Number(prompt("Enter a number:"));
+    let original = num;
+    let digits = String(Math.abs(num)).length;
+    let sum = 0;
+    let temp = Math.abs(num);
+
+    while (temp > 0) {
+        let digit = temp % 10;
+        sum += digit ** digits;
+        temp = Math.floor(temp / 10);
+    }
+
+    document.write(sum === Math.abs(original)
+        ? "Armstrong Number"
+        : "Not an Armstrong Number");
+</script>
+</body>
+</html>

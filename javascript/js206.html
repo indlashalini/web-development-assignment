@@ -1,0 +1,19 @@
+<form id="form">
+    Name:
+    <input type="text" id="name">
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e) {
+    let name = document.getElementById("name").value;
+
+    if (name === "") {
+        e.preventDefault();
+        alert("Name is required");
+    } else {
+        alert("Form submitted");
+    }
+});
+</script>

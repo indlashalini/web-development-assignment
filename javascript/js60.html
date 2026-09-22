@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Common Elements</h2>
+<script>
+    let arr1 = prompt("Enter first array values separated by commas:")
+        .split(",").map(Number);
+    let arr2 = prompt("Enter second array values separated by commas:")
+        .split(",").map(Number);
+
+    let common = arr1.filter(value => arr2.includes(value));
+
+    document.write("Common Elements: " + common);
+</script>
+</body>
+</html>

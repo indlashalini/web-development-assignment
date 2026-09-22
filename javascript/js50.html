@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>LCM</h2>
+<script>
+    let a = Math.abs(Number(prompt("Enter first number:")));
+    let b = Math.abs(Number(prompt("Enter second number:")));
+
+    function gcd(x, y) {
+        while (y !== 0) {
+            let temp = y;
+            y = x % y;
+            x = temp;
+        }
+        return x;
+    }
+
+    let lcm = (a === 0 || b === 0) ? 0 : Math.abs(a * b) / gcd(a, b);
+
+    document.write("LCM = " + lcm);
+</script>
+</body>
+</html>

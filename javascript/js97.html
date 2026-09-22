@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Dynamic Form Validation</h2>
+
+<form id="myForm">
+
+    <label>Name:</label>
+    <input type="text" id="name">
+    <span id="nameError" class="error"></span>
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+    <span id="emailError" class="error"></span>
+
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <span id="passwordError" class="error"></span>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p id="success" class="success"></p>
+
+<script>
+const form = document.getElementById("myForm");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+
+    let valid = true;
+
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+    document.getElementById("success").textContent = "";
+
+    if (name === "") {
+        document.getElementById("nameError").textContent =
+            " Name is required";
+        valid = false;
+    }
+
+    if (!email.includes("@")) {
+        document.getElementById("emailError").textContent =
+            " Enter a valid email";
+        valid = false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").textContent =
+            " Password must be at least 6 characters";
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("success").textContent =
+            "Form submitted successfully without page reload!";
+    }
+});
+</script>
+
+</body>
+</html>

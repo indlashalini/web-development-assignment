@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="gallery"></div>
+
+<script>
+let images = [
+    "https://via.placeholder.com/150/ff0000",
+    "https://via.placeholder.com/150/00ff00",
+    "https://via.placeholder.com/150/0000ff"
+];
+
+let gallery = document.getElementById("gallery");
+
+images.forEach(function(src) {
+    let img = document.createElement("img");
+    img.src = src;
+    img.width = 150;
+    img.style.margin = "10px";
+    gallery.appendChild(img);
+});
+</script>
+
+</body>
+</html>

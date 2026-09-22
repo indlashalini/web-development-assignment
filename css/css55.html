@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background: navy;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: lightblue;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .sections {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 30px;
+            background: #f2f2f2;
+            text-align: center;
+        }
+
+        footer {
+            background: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sections {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ABC College of Engineering</h1>
+    <p>Knowledge • Innovation • Excellence</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Departments</a>
+    <a href="#">Admissions</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to Our College</h1>
+    <p>Building the future through education</p>
+</section>
+
+<div class="sections">
+    <div class="card">
+        <h2>Courses</h2>
+        <p>B.Tech, BCA, MCA and more.</p>
+    </div>
+
+    <div class="card">
+        <h2>Campus</h2>
+        <p>Modern infrastructure and facilities.</p>
+    </div>
+
+    <div class="card">
+        <h2>Admissions</h2>
+        <p>Apply now for the academic year.</p>
+    </div>
+</div>
+
+<footer>
+    © 2026 ABC College
+</footer>
+
+</body>
+</html>

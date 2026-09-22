@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Calc Function</title>
+
+    <style>
+        .container {
+            width: calc(100% - 40px);
+            margin: 20px;
+            background: lightblue;
+            padding: 30px;
+        }
+
+        .box {
+            width: calc(50% - 20px);
+            display: inline-block;
+            background: lightgreen;
+            padding: 30px;
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+        @media(max-width:600px) {
+            .box {
+                width: calc(100% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS calc() Function</h1>
+
+<div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+</div>
+
+</body>
+</html>

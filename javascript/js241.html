@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Information</title>
+</head>
+<body>
+
+<h2>Browser Information</h2>
+
+<p id="info"></p>
+
+<script>
+let info =
+    "User Agent: " + navigator.userAgent + "<br>" +
+    "Language: " + navigator.language + "<br>" +
+    "Platform: " + navigator.platform + "<br>" +
+    "Cookies Enabled: " + navigator.cookieEnabled + "<br>" +
+    "Online: " + navigator.onLine;
+
+document.getElementById("info").innerHTML = info;
+</script>
+
+</body>
+</html>

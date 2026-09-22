@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Factorial</h2>
+<script>
+    let n = Number(prompt("Enter a number:"));
+    let factorial = 1;
+
+    if (n < 0 || !Number.isInteger(n)) {
+        document.write("Please enter a non-negative integer.");
+    } else {
+        for (let i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        document.write("Factorial of " + n + " = " + factorial);
+    }
+</script>
+</body>
+</html>

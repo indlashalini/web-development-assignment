@@ -1,0 +1,26 @@
+<p>Select course:</p>
+
+<input type="radio" name="course" value="BTech"> B.Tech
+<input type="radio" name="course" value="BCA"> BCA
+<input type="radio" name="course" value="BSc"> B.Sc
+
+<br><br>
+
+<button onclick="checkCourse()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function checkCourse() {
+    let course = document.querySelector(
+        'input[name="course"]:checked'
+    );
+
+    if (course)
+        document.getElementById("msg").innerHTML =
+            "Selected: " + course.value;
+    else
+        document.getElementById("msg").innerHTML =
+            "Please select a course";
+}
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Dropdown</title>
+</head>
+<body>
+    <h2>Select a Course</h2>
+
+    <select id="course"></select>
+
+    <script>
+        let courses = [
+            "Data Science",
+            "Cyber Security",
+            "Web Development",
+            "Artificial Intelligence"
+        ];
+
+        let dropdown = document.getElementById("course");
+
+        courses.forEach(function(course) {
+            let option = document.createElement("option");
+            option.textContent = course;
+            option.value = course;
+
+            dropdown.appendChild(option);
+        });
+    </script>
+</body>
+</html>

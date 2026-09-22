@@ -1,0 +1,33 @@
+<input type="text" id="name">
+
+<select id="course">
+    <option>B.Tech</option>
+    <option>BCA</option>
+</select>
+
+<p id="msg"></p>
+
+<script>
+
+let name = document.getElementById("name");
+let course = document.getElementById("course");
+
+name.addEventListener("focus", function() {
+    document.getElementById("msg").innerHTML = "Input focused";
+});
+
+name.addEventListener("input", function() {
+    document.getElementById("msg").innerHTML =
+        "Typing: " + this.value;
+});
+
+name.addEventListener("blur", function() {
+    document.getElementById("msg").innerHTML = "Input lost focus";
+});
+
+course.addEventListener("change", function() {
+    document.getElementById("msg").innerHTML =
+        "Course changed to " + this.value;
+});
+
+</script>

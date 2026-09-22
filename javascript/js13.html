@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Sort an Array</h2>
+<script>
+    let input = prompt("Enter numbers separated by commas:");
+    let arr = input.split(",").map(Number);
+
+    arr.sort((a, b) => a - b);
+    document.write("Sorted Array: " + arr);
+</script>
+</body>
+</html>

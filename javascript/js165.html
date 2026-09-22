@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="input">
+
+<h2 id="result">Press a key...</h2>
+
+<script>
+document.getElementById("input").addEventListener("keydown", function(event) {
+    document.getElementById("result").innerHTML =
+        "You pressed: " + event.key;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+Name:
+<input type="text" id="name"><br><br>
+
+Email:
+<input type="email" id="email"><br><br>
+
+<button onclick="preview()">Preview</button>
+
+<h3>Preview</h3>
+<div id="result"></div>
+
+<script>
+function preview() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Email: " + email;
+}
+</script>

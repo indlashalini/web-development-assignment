@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Elements</title>
+</head>
+<body>
+    <h2>Remove Element Dynamically</h2>
+
+    <p id="para">This paragraph will be removed.</p>
+    <button onclick="removeElement()">Remove Paragraph</button>
+
+    <script>
+        function removeElement() {
+            let element = document.getElementById("para");
+            element.remove();
+        }
+    </script>
+</body>
+</html>

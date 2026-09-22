@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Callbacks, Promises, Async/Await</h2>
+
+    <script>
+        // Callback
+        function greet(name, callback) {
+            callback("Hello, " + name);
+        }
+
+        greet("Shalini", function(message) {
+            document.write(message + "<br>");
+        });
+
+        // Promise
+        let promise = new Promise(function(resolve, reject) {
+            resolve("Promise executed successfully");
+        });
+
+        promise.then(function(result) {
+            document.write(result + "<br>");
+        });
+
+        // Async/Await
+        async function showMessage() {
+            let result = await Promise.resolve("Async/Await executed successfully");
+            document.write(result);
+        }
+
+        showMessage();
+    </script>
+</body>
+</html>

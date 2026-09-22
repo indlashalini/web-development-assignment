@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="oldText">This is the old paragraph.</p>
+<button onclick="replaceElement()">Replace</button>
+
+<script>
+function replaceElement() {
+    let newElement = document.createElement("h2");
+    newElement.textContent = "This is the new heading.";
+
+    let oldElement = document.getElementById("oldText");
+    oldElement.replaceWith(newElement);
+}
+</script>
+
+</body>
+</html>

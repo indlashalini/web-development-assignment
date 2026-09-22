@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            --main-color: navy;
+            --box-color: lightblue;
+            --spacing: 20px;
+        }
+
+        h1 {
+            color: var(--main-color);
+        }
+
+        .box {
+            background-color: var(--box-color);
+            padding: var(--spacing);
+            margin: var(--spacing);
+        }
+
+        button {
+            background: var(--main-color);
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Custom Properties</h1>
+
+<div class="box">
+    This box uses CSS variables.
+</div>
+
+<button>Click Me</button>
+
+</body>
+</html>

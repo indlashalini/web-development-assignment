@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="toggleAccordion()">What is JavaScript?</button>
+
+<p id="answer" style="display:none;">
+JavaScript is a scripting language used to make webpages interactive.
+</p>
+
+<script>
+function toggleAccordion() {
+    let answer = document.getElementById("answer");
+
+    answer.style.display =
+        answer.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</body>
+</html>

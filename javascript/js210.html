@@ -1,0 +1,16 @@
+<input type="password" id="password">
+<button onclick="checkPassword()">Check</button>
+
+<script>
+function checkPassword() {
+    let password = document.getElementById("password").value;
+
+    let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/;
+
+    alert(
+        pattern.test(password)
+        ? "Valid Password"
+        : "Invalid Password"
+    );
+}
+</script>

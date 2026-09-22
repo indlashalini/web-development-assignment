@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>GCD</h2>
+<script>
+    let a = Math.abs(Number(prompt("Enter first number:")));
+    let b = Math.abs(Number(prompt("Enter second number:")));
+
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    document.write("GCD = " + a);
+</script>
+</body>
+</html>

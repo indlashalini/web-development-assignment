@@ -1,0 +1,15 @@
+<input type="password" id="password">
+<button onclick="validatePassword()">Validate</button>
+<p id="msg"></p>
+
+<script>
+function validatePassword() {
+    let password = document.getElementById("password").value;
+
+    if (password.length >= 8)
+        document.getElementById("msg").innerHTML = "Valid password";
+    else
+        document.getElementById("msg").innerHTML =
+            "Password must contain at least 8 characters";
+}
+</script>

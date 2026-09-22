@@ -1,0 +1,35 @@
+<form id="contact">
+
+Name:
+<input type="text" id="name"><br><br>
+
+Email:
+<input type="email" id="email"><br><br>
+
+Message:
+<textarea id="message"></textarea><br><br>
+
+<button type="submit">Send</button>
+
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("contact").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (name === "" || email === "" || message === "") {
+        document.getElementById("msg").innerHTML =
+            "All fields are required";
+    } else {
+        document.getElementById("msg").innerHTML =
+            "Message sent successfully!";
+    }
+});
+</script>

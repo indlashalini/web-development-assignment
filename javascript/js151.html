@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Hover over me</button>
+
+<script>
+let button = document.getElementById("btn");
+
+button.addEventListener("mouseover", function() {
+    let tooltip = document.createElement("span");
+    tooltip.id = "tooltip";
+    tooltip.textContent = "This is a tooltip!";
+    tooltip.style.marginLeft = "10px";
+    tooltip.style.color = "blue";
+
+    button.parentElement.appendChild(tooltip);
+});
+
+button.addEventListener("mouseout", function() {
+    let tooltip = document.getElementById("tooltip");
+
+    if (tooltip) {
+        tooltip.remove();
+    }
+});
+</script>
+
+</body>
+</html>

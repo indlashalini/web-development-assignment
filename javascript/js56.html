@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Second Largest Number</h2>
+<script>
+    let input = prompt("Enter numbers separated by commas:");
+    let arr = input.split(",").map(Number);
+
+    let unique = [...new Set(arr)];
+    unique.sort((a, b) => b - a);
+
+    document.write(unique.length >= 2
+        ? "Second Largest: " + unique[1]
+        : "Please enter at least two different numbers.");
+</script>
+</body>
+</html>

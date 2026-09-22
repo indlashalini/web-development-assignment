@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1" id="studentTable">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+    </tr>
+</table>
+
+<script>
+let students = [
+    ["Shalini", 19, "B.Tech"],
+    ["Rahul", 20, "B.Sc"],
+    ["Anu", 19, "BCA"]
+];
+
+let table = document.getElementById("studentTable");
+
+students.forEach(function(student) {
+    let row = table.insertRow();
+
+    student.forEach(function(data) {
+        let cell = row.insertCell();
+        cell.textContent = data;
+    });
+});
+</script>
+
+</body>
+</html>

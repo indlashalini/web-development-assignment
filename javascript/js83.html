@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+</head>
+<body>
+
+<h2>Mouse Events Demonstration</h2>
+
+<button id="btn">Interact with Me</button>
+<p id="output">Perform a mouse action.</p>
+
+<script>
+const btn = document.getElementById("btn");
+const output = document.getElementById("output");
+
+btn.addEventListener("click", function() {
+    output.textContent = "Button clicked!";
+});
+
+btn.addEventListener("dblclick", function() {
+    output.textContent = "Button double-clicked!";
+});
+
+btn.addEventListener("mouseover", function() {
+    output.textContent = "Mouse is over the button.";
+});
+
+btn.addEventListener("mouseout", function() {
+    output.textContent = "Mouse left the button.";
+});
+
+btn.addEventListener("mousedown", function() {
+    output.textContent = "Mouse button pressed.";
+});
+
+btn.addEventListener("mouseup", function() {
+    output.textContent = "Mouse button released.";
+});
+</script>
+
+</body>
+</html>

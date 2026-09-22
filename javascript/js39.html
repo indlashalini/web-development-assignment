@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Spread and Rest Operators</h2>
+<script>
+    let arr1 = prompt("Enter first array values separated by commas:")
+        .split(",").map(Number);
+    let arr2 = prompt("Enter second array values separated by commas:")
+        .split(",").map(Number);
+
+    let merged = [...arr1, ...arr2];
+
+    function sum(...numbers) {
+        return numbers.reduce((total, n) => total + n, 0);
+    }
+
+    document.write("Merged Array: " + merged + "<br>");
+    document.write("Sum: " + sum(...merged));
+</script>
+</body>
+</html>

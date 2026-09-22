@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Coordinates</title>
+</head>
+<body>
+
+<h2>Current Geographical Coordinates</h2>
+
+<button onclick="getLocation()">Get Coordinates</button>
+
+<p id="output"></p>
+
+<script>
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+
+                let latitude = position.coords.latitude;
+                let longitude = position.coords.longitude;
+
+                document.getElementById("output").innerHTML =
+                    "Latitude: " + latitude + "<br>" +
+                    "Longitude: " + longitude;
+            },
+
+            function() {
+                document.getElementById("output").innerHTML =
+                    "Location permission denied or unavailable.";
+            }
+        );
+
+    } else {
+
+        document.getElementById("output").innerHTML =
+            "Geolocation is not supported by this browser.";
+    }
+}
+</script>
+
+</body>
+</html>

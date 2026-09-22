@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="courses">
+    <option>Select Course</option>
+</select>
+
+<button onclick="addOption()">Add Course</button>
+
+<script>
+function addOption() {
+    let option = document.createElement("option");
+    option.textContent = "Data Science";
+    option.value = "Data Science";
+
+    document.getElementById("courses").appendChild(option);
+}
+</script>
+
+</body>
+</html>

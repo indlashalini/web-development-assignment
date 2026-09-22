@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h2>Currency Converter</h2>
+
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="text" id="from" placeholder="From (USD)">
+    <input type="text" id="to" placeholder="To (INR)">
+
+    <button onclick="convertCurrency()">Convert</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function convertCurrency() {
+            let amount = Number(document.getElementById("amount").value);
+            let from = document.getElementById("from").value.toUpperCase();
+            let to = document.getElementById("to").value.toUpperCase();
+
+            let url =
+                `https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`;
+
+            try {
+                let response = await fetch(url);
+                let data = await response.json();
+
+                document.getElementById("result").innerHTML =
+                    "Converted Amount: " + data.rates[to];
+            } catch {
+                document.getElementById("result").innerHTML =
+                    "Conversion failed";
+            }
+        }
+    </script>
+</body>
+</html>

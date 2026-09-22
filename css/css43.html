@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Filters</title>
+    <style>
+        img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .blur {
+            filter: blur(4px);
+        }
+
+        .gray {
+            filter: grayscale(100%);
+        }
+
+        .bright {
+            filter: brightness(1.8);
+        }
+
+        .contrast {
+            filter: contrast(200%);
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Image Filters</h1>
+
+<img src="https://picsum.photos/200/150?1" class="blur">
+<img src="https://picsum.photos/200/150?2" class="gray">
+<img src="https://picsum.photos/200/150?3" class="bright">
+<img src="https://picsum.photos/200/150?4" class="contrast">
+
+</body>
+</html>

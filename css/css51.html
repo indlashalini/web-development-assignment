@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: navy;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Sidebar</h2>
+    <p>Home</p>
+    <p>Profile</p>
+    <p>Settings</p>
+</div>
+
+<div class="content">
+    <h1>Fixed Sidebar Layout</h1>
+    <p>The sidebar remains fixed while scrolling.</p>
+    <p style="margin-top:700px;">End of content.</p>
+</div>
+
+</body>
+</html>

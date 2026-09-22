@@ -1,0 +1,19 @@
+<input type="checkbox" id="terms">
+I agree to the terms and conditions
+
+<br><br>
+
+<button onclick="checkTerms()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function checkTerms() {
+    if (document.getElementById("terms").checked)
+        document.getElementById("msg").innerHTML =
+            "Terms accepted";
+    else
+        document.getElementById("msg").innerHTML =
+            "Please accept the terms";
+}
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Fit and Position</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        img {
+            width: 250px;
+            height: 200px;
+            border: 3px solid navy;
+        }
+
+        .cover {
+            object-fit: cover;
+        }
+
+        .contain {
+            object-fit: contain;
+        }
+
+        .position {
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Object Fit and Object Position</h1>
+
+<div class="container">
+    <img src="https://picsum.photos/400/250?1" class="cover">
+    <img src="https://picsum.photos/400/250?2" class="contain">
+    <img src="https://picsum.photos/400/250?3" class="position">
+</div>
+
+</body>
+</html>

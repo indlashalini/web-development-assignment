@@ -1,0 +1,32 @@
+<form id="register">
+    Username:
+    <input type="text" id="username"><br><br>
+
+    Password:
+    <input type="password" id="password"><br><br>
+
+    Confirm Password:
+    <input type="password" id="confirm"><br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("register").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    let p = document.getElementById("password").value;
+    let c = document.getElementById("confirm").value;
+
+    if (p !== c) {
+        document.getElementById("msg").innerHTML =
+            "Passwords do not match";
+    } else {
+        document.getElementById("msg").innerHTML =
+            "Registration successful";
+    }
+});
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overflow</title>
+    <style>
+        .visible {
+            width: 200px;
+            height: 80px;
+            background: lightblue;
+            overflow: visible;
+            margin: 20px;
+        }
+
+        .hidden {
+            width: 200px;
+            height: 80px;
+            background: pink;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .scroll {
+            width: 200px;
+            height: 80px;
+            background: lightgreen;
+            overflow: scroll;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Overflow</h1>
+
+<div class="visible">This content demonstrates visible overflow. Extra text extends outside.</div>
+
+<div class="hidden">This content demonstrates hidden overflow. Extra text is clipped.</div>
+
+<div class="scroll">This content demonstrates scroll overflow. Extra text can be scrolled.</div>
+
+</body>
+</html>

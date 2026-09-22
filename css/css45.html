@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 30%;
+            min-width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        @media(max-width:600px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Responsive Image Gallery</h1>
+
+<div class="gallery">
+    <img src="https://picsum.photos/300/200?1">
+    <img src="https://picsum.photos/300/200?2">
+    <img src="https://picsum.photos/300/200?3">
+    <img src="https://picsum.photos/300/200?4">
+</div>
+
+</body>
+</html>

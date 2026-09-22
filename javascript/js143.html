@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="country" onchange="loadStates()">
+    <option value="">Select Country</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+</select>
+
+<select id="state" onchange="loadCities()">
+    <option value="">Select State</option>
+</select>
+
+<select id="city">
+    <option value="">Select City</option>
+</select>
+
+<script>
+let data = {
+    India: {
+        TamilNadu: ["Chennai", "Coimbatore"],
+        Telangana: ["Hyderabad", "Warangal"]
+    },
+    USA: {
+        California: ["Los Angeles", "San Francisco"],
+        Texas: ["Houston", "Dallas"]
+    }
+};
+
+function loadStates() {
+    let country = document.getElementById("country").value;
+    let stateSelect = document.getElementById("state");
+
+    stateSelect.innerHTML = '<option value="">Select State</option>';
+    document.getElementById("city").innerHTML =
+        '<option value="">Select City</option>';
+
+    if (country !== "") {
+        for (let state in data[country]) {
+            let option = document.createElement("option");
+            option.value = state;
+            option.textContent = state;
+            stateSelect.appendChild(option);
+        }
+    }
+}
+
+function loadCities() {
+    let country = document.getElementById("country").value;
+    let state = document.getElementById("state").value;
+    let citySelect = document.getElementById("city");
+
+    citySelect.innerHTML = '<option value="">Select City</option>';
+
+    if (state !== "") {
+        data[country][state].forEach(function(city) {
+            let option = document.createElement("option");
+            option.textContent = city;
+            citySelect.appendChild(option);
+        });
+    }
+}
+</script>
+
+</body>
+</html>

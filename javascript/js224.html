@@ -1,0 +1,24 @@
+Salary:
+<input type="number" id="salary"><br><br>
+
+Bonus:
+<input type="number" id="bonus"><br><br>
+
+<button onclick="calculateSalary()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculateSalary() {
+
+    let salary = Number(document.getElementById("salary").value);
+    let bonus = Number(document.getElementById("bonus").value);
+
+    let total = salary + bonus;
+
+    document.getElementById("result").innerHTML =
+        "Basic Salary: ₹" + salary +
+        "<br>Bonus: ₹" + bonus +
+        "<br>Total Salary: ₹" + total;
+}
+</script>

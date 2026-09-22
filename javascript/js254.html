@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Store Array</h2>
+
+<button onclick="saveArray()">Save Array</button>
+<button onclick="displayArray()">Display Array</button>
+
+<p id="result"></p>
+
+<script>
+function saveArray() {
+    let fruits = ["Apple", "Mango", "Orange"];
+
+    localStorage.setItem("fruits", JSON.stringify(fruits));
+
+    alert("Array saved!");
+}
+
+function displayArray() {
+    let data = localStorage.getItem("fruits");
+
+    let fruits = JSON.parse(data);
+
+    document.getElementById("result").innerHTML =
+        fruits.join(", ");
+}
+</script>
+
+</body>
+</html>

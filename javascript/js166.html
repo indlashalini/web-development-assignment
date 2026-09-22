@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="input">
+
+<h2>Key Presses: <span id="count">0</span></h2>
+
+<script>
+let count = 0;
+
+document.getElementById("input").addEventListener("keydown", function() {
+    count++;
+    document.getElementById("count").innerHTML = count;
+});
+</script>
+
+</body>
+</html>

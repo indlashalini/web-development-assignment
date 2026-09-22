@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Quiz Application</h2>
+
+    <p>What is the capital of India?</p>
+
+    <button onclick="checkAnswer('Delhi')">Delhi</button>
+    <button onclick="checkAnswer('Mumbai')">Mumbai</button>
+    <button onclick="checkAnswer('Chennai')">Chennai</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === "Delhi") {
+                document.getElementById("result").innerHTML =
+                    "Correct Answer!";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Wrong Answer!";
+            }
+        }
+    </script>
+</body>
+</html>

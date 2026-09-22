@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Search Students</h2>
+
+    <input type="text" id="search" placeholder="Search name"
+           onkeyup="searchTable()">
+
+    <table id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>Shalini</td>
+            <td>Data Science</td>
+        </tr>
+        <tr>
+            <td>Anu</td>
+            <td>Cyber Security</td>
+        </tr>
+        <tr>
+            <td>Ravi</td>
+            <td>Computer Science</td>
+        </tr>
+    </table>
+
+    <script>
+        function searchTable() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let rows = document.querySelectorAll("#studentTable tr");
+
+            for (let i = 1; i < rows.length; i++) {
+                let text = rows[i].textContent.toLowerCase();
+
+                if (text.includes(input)) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

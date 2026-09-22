@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.highlight {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<p id="para">Sample Text</p>
+
+<button onclick="addClass()">Add Class</button>
+<button onclick="removeClass()">Remove Class</button>
+
+<script>
+function addClass() {
+    document.getElementById("para").classList.add("highlight");
+}
+
+function removeClass() {
+    document.getElementById("para").classList.remove("highlight");
+}
+</script>
+
+</body>
+</html>

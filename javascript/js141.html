@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="menu"></select>
+
+<script>
+let items = ["Home", "About", "Services", "Contact"];
+
+let menu = document.getElementById("menu");
+
+items.forEach(function(item) {
+    let option = document.createElement("option");
+    option.textContent = item;
+    option.value = item;
+    menu.appendChild(option);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="toggleContent()">Show / Hide</button>
+
+<p id="content">This is the hidden content.</p>
+
+<script>
+function toggleContent() {
+    let content = document.getElementById("content");
+
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

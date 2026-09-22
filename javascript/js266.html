@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Temporary Form</h2>
+
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+
+<button onclick="saveData()">Save</button>
+
+<script>
+
+function saveData() {
+
+    sessionStorage.setItem(
+        "name",
+        document.getElementById("name").value
+    );
+
+    sessionStorage.setItem(
+        "email",
+        document.getElementById("email").value
+    );
+
+    alert("Temporary data saved!");
+}
+
+</script>
+
+</body>
+</html>

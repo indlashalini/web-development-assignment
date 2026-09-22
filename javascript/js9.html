@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Palindrome Number</h2>
+<script>
+    let num = Number(prompt("Enter a number:"));
+    let original = num;
+    let reverse = 0;
+
+    while (num > 0) {
+        let digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+
+    document.write(original === reverse
+        ? "Palindrome Number"
+        : "Not a Palindrome Number");
+</script>
+</body>
+</html>

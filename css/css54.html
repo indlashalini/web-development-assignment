@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Contact Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #eef2f3;
+        }
+
+        .contact {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: navy;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: navy;
+            color: white;
+            border: none;
+        }
+
+        @media(max-width:600px) {
+            .contact {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact">
+    <h1>Contact Us</h1>
+
+    <form>
+        <label>Name</label>
+        <input type="text" placeholder="Your Name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Your Email">
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button>Send Message</button>
+    </form>
+</div>
+
+</body>
+</html>

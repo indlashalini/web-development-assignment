@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Application</title>
+</head>
+<body>
+    <h2>JavaScript Quiz</h2>
+
+    <p id="question"></p>
+    <div id="options"></div>
+
+    <button onclick="nextQuestion()">Next</button>
+
+    <h3 id="score"></h3>
+
+    <script>
+        let questions = [
+            {
+                q: "Which language runs in the browser?",
+                options: ["Python", "JavaScript", "C"],
+                answer: "JavaScript"
+            },
+            {
+                q: "Which keyword declares a constant?",
+                options: ["var", "let", "const"],
+                answer: "const"
+            }
+        ];
+
+        let index = 0;
+        let score = 0;
+        let selected = "";
+
+        function loadQuestion() {
+            let q = questions[index];
+
+            document.getElementById("question").innerHTML = q.q;
+
+            document.getElementById("options").innerHTML =
+                q.options.map(option =>
+                    `<button onclick="selectAnswer('${option}')">${option}</button>`
+                ).join(" ");
+        }
+
+        function selectAnswer(answer) {
+            selected = answer;
+        }
+
+        function nextQuestion() {
+            if (selected === questions[index].answer) {
+                score++;
+            }
+
+            selected = "";
+            index++;
+
+            if (index < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("question").innerHTML =
+                    "Quiz Completed!";
+                document.getElementById("options").innerHTML = "";
+                document.getElementById("score").innerHTML =
+                    "Score: " + score + "/" + questions.length;
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

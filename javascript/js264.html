@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Visitor Counter</h2>
+
+<p id="count"></p>
+
+<script>
+
+let count =
+    Number(localStorage.getItem("visits")) || 0;
+
+count++;
+
+localStorage.setItem("visits", count);
+
+document.getElementById("count").innerHTML =
+    "Number of visits: " + count;
+
+</script>
+
+</body>
+</html>

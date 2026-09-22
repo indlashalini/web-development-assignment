@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Functions</title>
+
+    <style>
+        h1 {
+            font-size: clamp(24px, 5vw, 60px);
+            text-align: center;
+        }
+
+        .box {
+            width: min(90%, 600px);
+            min-height: 200px;
+            margin: auto;
+            padding: max(20px, 3vw);
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS clamp(), min() and max()</h1>
+
+<div class="box">
+    <p>
+        This box uses min() for width and max() for padding.
+        The heading uses clamp() for responsive font sizing.
+    </p>
+</div>
+
+</body>
+</html>

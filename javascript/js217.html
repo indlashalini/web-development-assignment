@@ -1,0 +1,42 @@
+<form id="job">
+
+Name:
+<input type="text" id="name"><br><br>
+
+Email:
+<input type="email" id="email"><br><br>
+
+Experience:
+<input type="number" id="experience"><br><br>
+
+Resume:
+<input type="file" id="resume"><br><br>
+
+<button type="submit">Apply</button>
+
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("job").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let experience = document.getElementById("experience").value;
+    let resume = document.getElementById("resume").value;
+
+    if (name === "" || email === "" ||
+        experience === "" || resume === "") {
+
+        document.getElementById("msg").innerHTML =
+            "All fields are required";
+        return;
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Job application submitted successfully";
+});
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input 
+    type="text"
+    id="name"
+    placeholder="Enter your name">
+
+<script>
+let input = document.getElementById("name");
+
+input.addEventListener("focus", function() {
+    input.style.backgroundColor = "lightblue";
+});
+
+input.addEventListener("blur", function() {
+    input.style.backgroundColor = "white";
+});
+</script>
+
+</body>
+</html>

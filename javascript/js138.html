@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1" id="table">
+    <tr>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>Shalini</td>
+        <td><button onclick="editRow(this)">Edit</button></td>
+    </tr>
+</table>
+
+<script>
+function editRow(button) {
+    let row = button.parentElement.parentElement;
+    let oldName = row.cells[0].textContent;
+
+    let newName = prompt("Enter new name:", oldName);
+
+    if (newName !== null && newName !== "") {
+        row.cells[0].textContent = newName;
+    }
+}
+</script>
+
+</body>
+</html>

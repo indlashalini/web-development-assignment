@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Array Sum and Average</h2>
+<script>
+    let input = prompt("Enter numbers separated by commas:");
+    let arr = input.split(",").map(Number);
+
+    let sum = arr.reduce((total, value) => total + value, 0);
+    let average = sum / arr.length;
+
+    document.write("Sum: " + sum + "<br>");
+    document.write("Average: " + average);
+</script>
+</body>
+</html>

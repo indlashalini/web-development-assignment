@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Remove Duplicates</h2>
+<script>
+    let input = prompt("Enter numbers separated by commas:");
+    let arr = input.split(",").map(Number);
+
+    let unique = [...new Set(arr)];
+
+    document.write("Array without duplicates: " + unique);
+</script>
+</body>
+</html>

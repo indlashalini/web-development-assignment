@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile First Design</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .card {
+            background: lightblue;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Tablet and desktop */
+        @media(min-width:768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .card {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mobile-First Responsive Design</h1>
+
+<div class="container">
+    <div class="card">Section 1</div>
+    <div class="card">Section 2</div>
+    <div class="card">Section 3</div>
+</div>
+
+</body>
+</html>

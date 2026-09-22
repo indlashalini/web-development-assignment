@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Palindrome String</h2>
+<script>
+    let str = prompt("Enter a string:");
+    let reverse = str.split("").reverse().join("");
+
+    document.write(str === reverse
+        ? "Palindrome String"
+        : "Not a Palindrome String");
+</script>
+</body>
+</html>

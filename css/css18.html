@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animations</title>
+
+    <style>
+        .ball {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            animation: moveBall 3s infinite alternate;
+        }
+
+        @keyframes moveBall {
+            from {
+                left: 0;
+                background-color: red;
+            }
+
+            to {
+                left: 500px;
+                background-color: blue;
+            }
+        }
+
+        h1 {
+            animation: fade 2s infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.3;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animation Demonstration</h1>
+
+    <div class="ball"></div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Frequency of Array Elements</h2>
+<script>
+    let arr = prompt("Enter numbers separated by commas:")
+        .split(",").map(Number);
+    let frequency = {};
+
+    arr.forEach(function(value) {
+        frequency[value] = (frequency[value] || 0) + 1;
+    });
+
+    document.write(JSON.stringify(frequency));
+</script>
+</body>
+</html>

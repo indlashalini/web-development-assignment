@@ -1,0 +1,22 @@
+<input type="password" id="password">
+<button onclick="checkPassword()">Check</button>
+<p id="msg"></p>
+
+<script>
+function checkPassword() {
+    let p = document.getElementById("password").value;
+
+    if (p.length >= 8 &&
+        /[A-Z]/.test(p) &&
+        /[a-z]/.test(p) &&
+        /[0-9]/.test(p) &&
+        /[@$!%*?&]/.test(p)) {
+
+        document.getElementById("msg").innerHTML =
+            "Strong password";
+    } else {
+        document.getElementById("msg").innerHTML =
+            "Use uppercase, lowercase, number and special character";
+    }
+}
+</script>

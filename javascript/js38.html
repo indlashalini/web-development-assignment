@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Destructuring Assignment</h2>
+<script>
+    let student = [
+        prompt("Enter student name:"),
+        Number(prompt("Enter student age:")),
+        prompt("Enter course:")
+    ];
+
+    let [studentName, studentAge, course] = student;
+
+    document.write("Name: " + studentName + "<br>");
+    document.write("Age: " + studentAge + "<br>");
+    document.write("Course: " + course);
+</script>
+</body>
+</html>

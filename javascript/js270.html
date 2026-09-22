@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Restore Form Data</h2>
+
+<input id="name" placeholder="Name">
+<br><br>
+
+<input id="email" placeholder="Email">
+
+<script>
+
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
+
+nameInput.value =
+    localStorage.getItem("formName") || "";
+
+emailInput.value =
+    localStorage.getItem("formEmail") || "";
+
+nameInput.addEventListener("input", function() {
+    localStorage.setItem("formName", this.value);
+});
+
+emailInput.addEventListener("input", function() {
+    localStorage.setItem("formEmail", this.value);
+});
+
+</script>
+
+</body>
+</html>

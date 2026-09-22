@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Regular Expression Example</h2>
+<script>
+    let str = prompt("Enter text containing the word JavaScript and/or numbers:");
+
+    let pattern = /JavaScript/i;
+
+    document.write("Pattern found: " + pattern.test(str) + "<br>");
+
+    let numbers = str.match(/\d+/g);
+
+    document.write("Numbers found: " + (numbers ? numbers.join(", ") : "None"));
+</script>
+</body>
+</html>

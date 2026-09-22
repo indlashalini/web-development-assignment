@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Array Methods</h2>
+<script>
+    let input = prompt("Enter fruits separated by commas:");
+    let fruits = input.split(",").map(item => item.trim());
+
+    fruits.push("Orange");
+
+    document.write("Array: " + fruits + "<br>");
+    document.write("Length: " + fruits.length + "<br>");
+
+    fruits.pop();
+
+    document.write("After pop: " + fruits + "<br>");
+    document.write("First fruit: " + fruits[0]);
+</script>
+</body>
+</html>

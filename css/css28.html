@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Combinators</title>
+    <style>
+        /* Descendant selector */
+        .container p {
+            color: blue;
+        }
+
+        /* Child selector */
+        .container > h2 {
+            color: red;
+        }
+
+        /* Adjacent sibling */
+        h2 + p {
+            background: yellow;
+        }
+
+        /* General sibling */
+        h2 ~ div {
+            border: 2px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Heading</h2>
+    <p>Adjacent paragraph</p>
+    <p>Another paragraph</p>
+    <div>General sibling div</div>
+    <div>Another sibling div</div>
+</div>
+
+</body>
+</html>

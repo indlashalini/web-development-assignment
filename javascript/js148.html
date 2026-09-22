@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="showTab('home')">Home</button>
+<button onclick="showTab('about')">About</button>
+<button onclick="showTab('contact')">Contact</button>
+
+<div id="home">Welcome to Home</div>
+<div id="about" style="display:none;">About Us</div>
+<div id="contact" style="display:none;">Contact Us</div>
+
+<script>
+function showTab(tabName) {
+    let tabs = ["home", "about", "contact"];
+
+    tabs.forEach(function(tab) {
+        document.getElementById(tab).style.display = "none";
+    });
+
+    document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html>

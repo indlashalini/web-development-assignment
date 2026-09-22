@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+
+    <input type="text" placeholder="Enter name">
+
+    <button type="reset">Reset</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("myForm").addEventListener("reset", function() {
+    document.getElementById("message").innerHTML =
+        "Form has been reset!";
+});
+</script>
+
+</body>
+</html>

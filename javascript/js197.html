@@ -1,0 +1,23 @@
+Date of Birth:
+<input type="date" id="dob">
+
+<button onclick="validateDOB()">Validate</button>
+
+<p id="msg"></p>
+
+<script>
+function validateDOB() {
+    let dob = document.getElementById("dob").value;
+
+    if (dob === "") {
+        document.getElementById("msg").innerHTML =
+            "Date of birth is required";
+    } else if (new Date(dob) > new Date()) {
+        document.getElementById("msg").innerHTML =
+            "DOB cannot be a future date";
+    } else {
+        document.getElementById("msg").innerHTML =
+            "Valid date of birth";
+    }
+}
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Float and Clear</title>
+
+    <style>
+        .image {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            float: left;
+            margin: 10px;
+            text-align: center;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+
+        .clear {
+            clear: both;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Float and Clear Properties</h1>
+
+    <div class="image">Floating Box</div>
+
+    <p>
+        This text flows around the floating box.
+        Float allows an element to move to the left or right
+        while other content flows around it.
+    </p>
+
+    <div class="clear">
+        This section uses clear: both, so it appears below the float.
+    </div>
+
+</body>
+</html>

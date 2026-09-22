@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Elements</title>
+</head>
+<body>
+    <h2 id="title">Original Heading</h2>
+    <p id="text">Original paragraph</p>
+    <button id="btn">Original Button</button>
+
+    <br><br>
+    <button onclick="changeAll()">Change All</button>
+
+    <script>
+        function changeAll() {
+            document.getElementById("title").textContent = "Updated Heading";
+            document.getElementById("text").textContent = "Updated paragraph text";
+            document.getElementById("btn").textContent = "Updated Button";
+
+            document.getElementById("title").style.color = "green";
+            document.getElementById("text").style.color = "blue";
+            document.getElementById("btn").style.backgroundColor = "orange";
+        }
+    </script>
+</body>
+</html>

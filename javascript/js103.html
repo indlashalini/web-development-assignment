@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sessionStorage Example</title>
+</head>
+<body>
+    <h2>sessionStorage Demonstration</h2>
+
+    <input type="text" id="data" placeholder="Enter data">
+    <button onclick="saveData()">Save</button>
+    <button onclick="showData()">Display</button>
+
+    <p id="output"></p>
+
+    <script>
+        function saveData() {
+            sessionStorage.setItem(
+                "myData",
+                document.getElementById("data").value
+            );
+            alert("Data saved for this session!");
+        }
+
+        function showData() {
+            let data = sessionStorage.getItem("myData");
+            document.getElementById("output").innerHTML =
+                "Stored Data: " + data;
+        }
+    </script>
+</body>
+</html>

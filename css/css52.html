@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Footer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .footer-section a {
+            color: white;
+            display: block;
+            text-decoration: none;
+            margin: 8px;
+        }
+
+        .footer-section a:hover {
+            color: orange;
+        }
+
+        .copyright {
+            text-align: center;
+            background: black;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Responsive Footer</h1>
+
+<footer>
+    <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We create modern websites.</p>
+    </div>
+
+    <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: example@email.com</p>
+        <p>Phone: 9876543210</p>
+    </div>
+</footer>
+
+<div class="copyright">
+    © 2026 My Website. All Rights Reserved.
+</div>
+
+</body>
+</html>

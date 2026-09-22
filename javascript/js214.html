@@ -1,0 +1,15 @@
+<input type="password" id="password">
+
+<input type="checkbox" onclick="showPassword()">
+Show Password
+
+<script>
+function showPassword() {
+    let p = document.getElementById("password");
+
+    if (p.type === "password")
+        p.type = "text";
+    else
+        p.type = "password";
+}
+</script>

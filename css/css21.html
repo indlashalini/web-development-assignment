@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #eef2f3;
+        }
+
+        .profile {
+            width: 600px;
+            max-width: 90%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px gray;
+        }
+
+        .profile h1 {
+            color: navy;
+            text-align: center;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info div {
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-left: 4px solid navy;
+        }
+
+        .about {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: lightblue;
+        }
+
+        @media (max-width: 600px) {
+            .info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile">
+        <h1>Student Profile</h1>
+
+        <div class="info">
+            <div><strong>Name:</strong> Shalini Indla</div>
+            <div><strong>Roll No:</strong> 2026BT101</div>
+            <div><strong>Course:</strong> B.Tech</div>
+            <div><strong>Department:</strong> Computer Science</div>
+            <div><strong>Year:</strong> 2nd Year</div>
+            <div><strong>College:</strong> Sai University</div>
+        </div>
+
+        <div class="about">
+            <h3>About Student</h3>
+            <p>
+                A motivated student interested in programming,
+                web development, data science, and technology.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

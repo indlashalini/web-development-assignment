@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transitions</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: blue;
+            margin: 80px auto;
+            transition: background-color 1s, width 1s;
+        }
+
+        .box:hover {
+            background: orange;
+            width: 300px;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            padding: 15px;
+            transition: transform 0.5s;
+        }
+
+        button:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Transitions</h1>
+
+<div class="box"></div>
+
+<button>Hover Me</button>
+
+</body>
+</html>

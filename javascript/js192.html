@@ -1,0 +1,15 @@
+<input type="text" id="mobile">
+<button onclick="validateMobile()">Validate</button>
+<p id="msg"></p>
+
+<script>
+function validateMobile() {
+    let mobile = document.getElementById("mobile").value;
+
+    if (/^[0-9]{10}$/.test(mobile))
+        document.getElementById("msg").innerHTML = "Valid mobile number";
+    else
+        document.getElementById("msg").innerHTML =
+            "Enter a valid 10-digit mobile number";
+}
+</script>

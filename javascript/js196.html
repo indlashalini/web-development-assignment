@@ -1,0 +1,23 @@
+Password:
+<input type="password" id="password"><br><br>
+
+Confirm Password:
+<input type="password" id="confirm"><br><br>
+
+<button onclick="check()">Check</button>
+
+<p id="msg"></p>
+
+<script>
+function check() {
+    let p1 = document.getElementById("password").value;
+    let p2 = document.getElementById("confirm").value;
+
+    if (p1 === p2)
+        document.getElementById("msg").innerHTML =
+            "Passwords match";
+    else
+        document.getElementById("msg").innerHTML =
+            "Passwords do not match";
+}
+</script>

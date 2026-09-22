@@ -1,0 +1,15 @@
+<input type="text" id="name" placeholder="Enter name">
+<p id="msg"></p>
+
+<script>
+document.getElementById("name").addEventListener("input", function() {
+
+    if (/^[A-Za-z ]+$/.test(this.value)) {
+        document.getElementById("msg").innerHTML =
+            "Valid name";
+    } else {
+        document.getElementById("msg").innerHTML =
+            "Only alphabets allowed";
+    }
+});
+</script>

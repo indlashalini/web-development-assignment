@@ -1,0 +1,23 @@
+<select id="city">
+    <option value="">Select City</option>
+    <option>Chennai</option>
+    <option>Hyderabad</option>
+    <option>Bangalore</option>
+</select>
+
+<button onclick="checkCity()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function checkCity() {
+    let city = document.getElementById("city").value;
+
+    if (city === "")
+        document.getElementById("msg").innerHTML =
+            "Please select a city";
+    else
+        document.getElementById("msg").innerHTML =
+            "City: " + city;
+}
+</script>

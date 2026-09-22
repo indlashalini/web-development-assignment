@@ -1,0 +1,14 @@
+<input type="text" id="email">
+<button onclick="validateEmail()">Validate</button>
+<p id="msg"></p>
+
+<script>
+function validateEmail() {
+    let email = document.getElementById("email").value;
+
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+        document.getElementById("msg").innerHTML = "Valid email";
+    else
+        document.getElementById("msg").innerHTML = "Invalid email";
+}
+</script>

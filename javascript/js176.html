@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Click Me</button>
+
+<p id="message"></p>
+
+<script>
+let button = document.getElementById("btn");
+
+button.addEventListener("click", function() {
+    document.getElementById("message").innerHTML =
+        "First event executed";
+});
+
+button.addEventListener("click", function() {
+    alert("Second event executed");
+});
+</script>
+
+</body>
+</html>

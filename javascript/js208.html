@@ -1,0 +1,12 @@
+<input type="text" id="email">
+<button onclick="checkEmail()">Check</button>
+
+<script>
+function checkEmail() {
+    let email = document.getElementById("email").value;
+
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    alert(pattern.test(email) ? "Valid Email" : "Invalid Email");
+}
+</script>

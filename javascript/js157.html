@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="container">
+    <p id="oldPara">Original Paragraph</p>
+</div>
+
+<button onclick="createElementDemo()">Create Element</button>
+<button onclick="appendElementDemo()">Append Element</button>
+<button onclick="removeElementDemo()">Remove Element</button>
+<button onclick="replaceElementDemo()">Replace Element</button>
+
+<script>
+function createElementDemo() {
+    let element = document.createElement("p");
+    element.textContent = "New element created!";
+    alert("Element created successfully!");
+}
+
+function appendElementDemo() {
+    let element = document.createElement("p");
+    element.textContent = "Element appended to container.";
+
+    document.getElementById("container").appendChild(element);
+}
+
+function removeElementDemo() {
+    let para = document.getElementById("oldPara");
+
+    if (para) {
+        para.remove();
+    }
+}
+
+function replaceElementDemo() {
+    let newElement = document.createElement("h2");
+    newElement.textContent = "Paragraph Replaced!";
+
+    let oldElement = document.getElementById("oldPara");
+
+    if (oldElement) {
+        document.getElementById("container")
+            .replaceChild(newElement, oldElement);
+    }
+}
+</script>
+
+</body>
+</html>

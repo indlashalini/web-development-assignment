@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            transition: 0.3s;
+        }
+
+        .dark {
+            background-color: #222;
+            color: white;
+        }
+
+        .light {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Light / Dark Theme Switcher</h2>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        let savedTheme = localStorage.getItem("theme") || "light";
+        document.body.className = savedTheme;
+
+        function toggleTheme() {
+            let currentTheme = document.body.className;
+
+            let newTheme =
+                currentTheme === "light" ? "dark" : "light";
+
+            document.body.className = newTheme;
+            localStorage.setItem("theme", newTheme);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Counter Application</h2>
+
+    <h1 id="count">0</h1>
+
+    <button onclick="decrement()">-</button>
+    <button onclick="increment()">+</button>
+
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById("count").innerHTML = count;
+        }
+    </script>
+</body>
+</html>

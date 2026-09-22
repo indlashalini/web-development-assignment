@@ -1,0 +1,19 @@
+<input type="password" id="password"
+       oninput="checkStrength()">
+
+<p id="strength"></p>
+
+<script>
+function checkStrength() {
+    let p = document.getElementById("password").value;
+    let result = document.getElementById("strength");
+
+    if (p.length < 6) {
+        result.innerHTML = "Weak";
+    } else if (p.length < 10) {
+        result.innerHTML = "Medium";
+    } else {
+        result.innerHTML = "Strong";
+    }
+}
+</script>

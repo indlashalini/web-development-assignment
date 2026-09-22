@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Blog Layout</title>
+
+    <style>
+        .layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main {
+            background: lightblue;
+            padding: 30px;
+        }
+
+        .sidebar {
+            background: lightgray;
+            padding: 30px;
+        }
+
+        article {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        @media(max-width:600px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Daily News Blog</h1>
+
+<div class="layout">
+
+    <main class="main">
+        <h2>Latest News</h2>
+
+        <article>
+            <h3>Technology Advances</h3>
+            <p>New technologies are changing the world.</p>
+        </article>
+
+        <article>
+            <h3>Education Updates</h3>
+            <p>Modern learning methods are growing rapidly.</p>
+        </article>
+    </main>
+
+    <aside class="sidebar">
+        <h2>Categories</h2>
+        <p>Technology</p>
+        <p>Education</p>
+        <p>Travel</p>
+        <p>Sports</p>
+    </aside>
+
+</div>
+
+</body>
+</html>

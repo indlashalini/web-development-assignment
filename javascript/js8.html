@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Prime Number Checker</h2>
+<script>
+    let num = Number(prompt("Enter a number:"));
+    let isPrime = true;
+
+    if (num < 2 || !Number.isInteger(num)) {
+        isPrime = false;
+    }
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    document.write(isPrime
+        ? num + " is a Prime Number"
+        : num + " is Not a Prime Number");
+</script>
+</body>
+</html>

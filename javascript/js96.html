@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+</head>
+<body>
+
+<h2>College Admission Form</h2>
+
+<form id="admissionForm">
+
+    <label>Student Name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email">
+
+    <br><br>
+
+    <label>Percentage:</label>
+    <input type="number" id="percentage">
+
+    <br><br>
+
+    <label>Course:</label>
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="B.Sc">B.Sc</option>
+        <option value="BCA">BCA</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Apply</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let percentage = Number(document.getElementById("percentage").value);
+    let course = document.getElementById("course").value;
+
+    if (name === "") {
+        document.getElementById("message").textContent =
+            "Please enter student name.";
+    }
+    else if (!email.includes("@")) {
+        document.getElementById("message").textContent =
+            "Please enter a valid email.";
+    }
+    else if (percentage < 50 || percentage > 100) {
+        document.getElementById("message").textContent =
+            "Percentage must be between 50 and 100.";
+    }
+    else if (course === "") {
+        document.getElementById("message").textContent =
+            "Please select a course.";
+    }
+    else {
+        document.getElementById("message").textContent =
+            "Admission application submitted successfully!";
+    }
+});
+</script>
+
+</body>
+</html>

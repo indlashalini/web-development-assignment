@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<textarea id="message" maxlength="100"></textarea>
+<p>Characters: <span id="count">0</span>/100</p>
+
+<script>
+document.getElementById("message").addEventListener("input", function() {
+    document.getElementById("count").textContent = this.value.length;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>localStorage Example</h2>
+<p id="output"></p>
+
+<script>
+    let name = prompt("Enter a name to store:");
+    localStorage.setItem("name", name);
+
+    let storedName = localStorage.getItem("name");
+
+    document.getElementById("output").innerHTML =
+        "Stored Name: " + storedName;
+</script>
+</body>
+</html>

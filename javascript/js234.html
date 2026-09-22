@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stopwatch</title>
+</head>
+<body>
+
+<h2>Stopwatch</h2>
+
+<h1 id="time">00:00:00</h1>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+<button onclick="reset()">Reset</button>
+
+<script>
+let seconds = 0;
+let timer;
+
+function displayTime() {
+    let hrs = Math.floor(seconds / 3600);
+    let mins = Math.floor((seconds % 3600) / 60);
+    let secs = seconds % 60;
+
+    document.getElementById("time").innerHTML =
+        String(hrs).padStart(2, "0") + ":" +
+        String(mins).padStart(2, "0") + ":" +
+        String(secs).padStart(2, "0");
+}
+
+function start() {
+    if (!timer) {
+        timer = setInterval(function() {
+            seconds++;
+            displayTime();
+        }, 1000);
+    }
+}
+
+function stop() {
+    clearInterval(timer);
+    timer = null;
+}
+
+function reset() {
+    stop();
+    seconds = 0;
+    displayTime();
+}
+</script>
+
+</body>
+</html>

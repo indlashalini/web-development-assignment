@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url("https://picsum.photos/1400/600");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        button {
+            padding: 15px 30px;
+            background: orange;
+            border: none;
+            color: white;
+        }
+
+        .destinations {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .place {
+            width: 280px;
+            padding: 30px;
+            background: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Explore the World</h1>
+    <p>Discover beautiful destinations</p>
+    <button>Book Your Trip</button>
+</section>
+
+<h2 style="text-align:center;">Popular Destinations</h2>
+
+<div class="destinations">
+    <div class="place">
+        <h2>Paris</h2>
+        <p>City of lights</p>
+    </div>
+
+    <div class="place">
+        <h2>Maldives</h2>
+        <p>Beautiful beaches</p>
+    </div>
+
+    <div class="place">
+        <h2>Dubai</h2>
+        <p>Modern city experience</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<textarea id="message" rows="5" cols="30"></textarea>
+<br><br>
+
+<button onclick="validateText()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function validateText() {
+    let text = document.getElementById("message").value.trim();
+
+    if (text === "")
+        document.getElementById("msg").innerHTML =
+            "Message cannot be empty";
+    else
+        document.getElementById("msg").innerHTML =
+            "Valid message";
+}
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    cursor: grab;
+}
+
+#target {
+    width: 200px;
+    height: 150px;
+    border: 2px dashed black;
+    margin-top: 20px;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="box" draggable="true">Drag Me</div>
+
+<div id="target">Drop Here</div>
+
+<script>
+let box = document.getElementById("box");
+let target = document.getElementById("target");
+
+box.addEventListener("dragstart", function(event) {
+    event.dataTransfer.setData("text", "box");
+});
+
+target.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+
+target.addEventListener("drop", function(event) {
+    event.preventDefault();
+
+    let data = event.dataTransfer.getData("text");
+
+    if (data === "box") {
+        target.appendChild(box);
+    }
+});
+</script>
+
+</body>
+</html>

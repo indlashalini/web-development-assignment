@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigator Object</title>
+</head>
+<body>
+    <h2>Navigator Object Demonstration</h2>
+
+    <button onclick="showNavigator()">Show Browser Details</button>
+    <p id="output"></p>
+
+    <script>
+        function showNavigator() {
+            document.getElementById("output").innerHTML = `
+                Browser Language: ${navigator.language}<br>
+                Online Status: ${navigator.onLine}<br>
+                Platform: ${navigator.platform}<br>
+                User Agent: ${navigator.userAgent}
+            `;
+        }
+    </script>
+</body>
+</html>

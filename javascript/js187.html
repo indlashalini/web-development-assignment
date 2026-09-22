@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#box {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Reaction Time Game</h2>
+
+<div id="box">Wait...</div>
+
+<p id="result"></p>
+
+<script>
+let startTime;
+
+let delay = Math.floor(Math.random() * 3000) + 2000;
+
+setTimeout(function() {
+
+    document.getElementById("box").style.backgroundColor = "green";
+
+    document.getElementById("box").innerHTML = "CLICK NOW!";
+
+    startTime = Date.now();
+
+}, delay);
+
+document.getElementById("box").addEventListener("click", function() {
+
+    if (startTime) {
+
+        let reactionTime = Date.now() - startTime;
+
+        document.getElementById("result").innerHTML =
+            "Your reaction time: " + reactionTime + " ms";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Too early!";
+
+    }
+
+});
+</script>
+
+</body>
+</html>

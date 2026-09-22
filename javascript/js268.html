@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Page 2</h2>
+
+<input id="course" placeholder="Enter course">
+
+<br><br>
+
+<button onclick="finish()">Finish</button>
+
+<p id="result"></p>
+
+<script>
+
+function finish() {
+
+    let name =
+        sessionStorage.getItem("name");
+
+    let course =
+        document.getElementById("course").value;
+
+    sessionStorage.setItem("course", course);
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Course: " + course;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<select id="type" onchange="showField()">
+    <option value="">Select Type</option>
+    <option value="student">Student</option>
+    <option value="employee">Employee</option>
+</select>
+
+<div id="field"></div>
+
+<script>
+function showField() {
+
+    let type = document.getElementById("type").value;
+    let field = document.getElementById("field");
+
+    if (type === "student") {
+        field.innerHTML =
+            'Roll Number: <input type="text" id="roll">';
+    }
+    else if (type === "employee") {
+        field.innerHTML =
+            'Employee ID: <input type="text" id="emp">';
+    }
+    else {
+        field.innerHTML = "";
+    }
+}
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .header {
+            background-color: navy;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: lightblue;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* For screens smaller than 600px */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .header {
+                font-size: 18px;
+            }
+
+            .card {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Responsive Website</h1>
+        <p>Resize the browser window</p>
+    </div>
+
+    <div class="container">
+        <div class="card">Section 1</div>
+        <div class="card">Section 2</div>
+        <div class="card">Section 3</div>
+    </div>
+
+</body>
+</html>

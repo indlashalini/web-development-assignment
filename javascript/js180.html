@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+</ul>
+
+<p id="result"></p>
+
+<script>
+document.getElementById("list").addEventListener("click", function(event) {
+
+    if (event.target.tagName === "LI") {
+        document.getElementById("result").innerHTML =
+            "You clicked: " + event.target.innerHTML;
+    }
+
+});
+</script>
+
+</body>
+</html>

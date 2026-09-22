@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Selection Methods</title>
+</head>
+<body>
+    <h2 id="heading">Hello DOM</h2>
+
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <p class="item">Item 3</p>
+
+    <button onclick="demonstrate()">Run</button>
+
+    <script>
+        function demonstrate() {
+            // getElementById()
+            let heading = document.getElementById("heading");
+            heading.style.color = "red";
+
+            // getElementsByClassName()
+            let items = document.getElementsByClassName("item");
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.backgroundColor = "lightblue";
+            }
+        }
+    </script>
+</body>
+</html>

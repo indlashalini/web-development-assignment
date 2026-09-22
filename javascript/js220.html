@@ -1,0 +1,45 @@
+<div id="step1">
+    <h3>Step 1</h3>
+    Name:
+    <input type="text" id="name"><br><br>
+    <button onclick="nextStep()">Next</button>
+</div>
+
+<div id="step2" style="display:none;">
+    <h3>Step 2</h3>
+    Email:
+    <input type="email" id="email"><br><br>
+    <button onclick="previousStep()">Back</button>
+    <button onclick="submitForm()">Submit</button>
+</div>
+
+<p id="msg"></p>
+
+<script>
+function nextStep() {
+
+    if (document.getElementById("name").value === "") {
+        alert("Enter name");
+        return;
+    }
+
+    document.getElementById("step1").style.display = "none";
+    document.getElementById("step2").style.display = "block";
+}
+
+function previousStep() {
+    document.getElementById("step2").style.display = "none";
+    document.getElementById("step1").style.display = "block";
+}
+
+function submitForm() {
+
+    if (document.getElementById("email").value === "") {
+        alert("Enter email");
+        return;
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Registration completed";
+}
+</script>

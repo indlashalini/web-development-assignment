@@ -1,0 +1,41 @@
+<form id="feedback">
+
+Name:
+<input type="text" id="name"><br><br>
+
+Rating:
+<select id="rating">
+    <option value="">Select Rating</option>
+    <option>Excellent</option>
+    <option>Good</option>
+    <option>Average</option>
+    <option>Poor</option>
+</select><br><br>
+
+Feedback:
+<textarea id="feedbackText"></textarea><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("feedback").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    if (document.getElementById("name").value === "" ||
+        document.getElementById("rating").value === "" ||
+        document.getElementById("feedbackText").value.trim() === "") {
+
+        document.getElementById("msg").innerHTML =
+            "Please complete all fields";
+        return;
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Thank you for your feedback!";
+});
+</script>

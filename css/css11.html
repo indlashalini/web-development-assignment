@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo Elements</title>
+
+    <style>
+        /* Before */
+        h1::before {
+            content: "★ ";
+            color: orange;
+        }
+
+        /* After */
+        h1::after {
+            content: " ★";
+            color: orange;
+        }
+
+        /* First Letter */
+        p::first-letter {
+            font-size: 40px;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* First Line */
+        p::first-line {
+            color: blue;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Pseudo-Elements</h1>
+
+    <p>
+        Pseudo-elements allow us to style specific parts of an HTML element.
+        They are useful for adding decorative content and formatting text.
+    </p>
+
+</body>
+</html>

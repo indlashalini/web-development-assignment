@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage" src="https://via.placeholder.com/150" width="150">
+<br><br>
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+function changeImage() {
+    let image = document.getElementById("myImage");
+    image.setAttribute("src", "https://via.placeholder.com/200/00ff00");
+    image.setAttribute("width", "200");
+}
+</script>
+
+</body>
+</html>

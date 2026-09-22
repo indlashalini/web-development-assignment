@@ -1,0 +1,39 @@
+<form id="form">
+
+Name:
+<input type="text" id="name"><br><br>
+
+Email:
+<input type="email" id="email"><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e) {
+
+    // Prevent page reload
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "") {
+        document.getElementById("msg").innerHTML =
+            "Name is required";
+        return;
+    }
+
+    if (email === "") {
+        document.getElementById("msg").innerHTML =
+            "Email is required";
+        return;
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Form submitted successfully without page reload!";
+});
+</script>

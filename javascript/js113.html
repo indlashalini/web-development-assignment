@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h2>Guess the Number (1–100)</h2>
+
+    <input type="number" id="guess">
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="result"></p>
+
+    <script>
+        let secret = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            let guess = Number(document.getElementById("guess").value);
+
+            if (guess === secret) {
+                document.getElementById("result").innerHTML =
+                    "Correct! You guessed the number.";
+            } else if (guess < secret) {
+                document.getElementById("result").innerHTML =
+                    "Too low!";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Too high!";
+            }
+        }
+    </script>
+</body>
+</html>

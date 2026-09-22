@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div 
+    onmousemove="moveMouse(event)"
+    style="width:400px;height:200px;border:2px solid black;">
+    
+    Move the Mouse Here
+
+</div>
+
+<p id="position"></p>
+
+<script>
+function moveMouse(event) {
+    document.getElementById("position").innerHTML =
+        "X: " + event.clientX + 
+        " Y: " + event.clientY;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Object</title>
+</head>
+<body>
+    <h2>Location Object Demonstration</h2>
+
+    <p id="output"></p>
+
+    <button onclick="reloadPage()">Reload Page</button>
+    <button onclick="goToGoogle()">Go to Google</button>
+
+    <script>
+        document.getElementById("output").innerHTML = `
+            Current URL: ${location.href}<br>
+            Hostname: ${location.hostname}<br>
+            Protocol: ${location.protocol}<br>
+            Pathname: ${location.pathname}
+        `;
+
+        function reloadPage() {
+            location.reload();
+        }
+
+        function goToGoogle() {
+            location.href = "https://www.google.com";
+        }
+    </script>
+</body>
+</html>

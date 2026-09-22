@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Largest and Smallest in an Array</h2>
+<script>
+    let input = prompt("Enter numbers separated by commas:");
+    let arr = input.split(",").map(Number);
+
+    let largest = Math.max(...arr);
+    let smallest = Math.min(...arr);
+
+    document.write("Array: " + arr + "<br>");
+    document.write("Largest: " + largest + "<br>");
+    document.write("Smallest: " + smallest);
+</script>
+</body>
+</html>

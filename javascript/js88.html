@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Delegation</title>
+</head>
+<body>
+
+<h2>Event Delegation</h2>
+
+<ul id="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact</li>
+</ul>
+
+<p id="output"></p>
+
+<script>
+document.getElementById("menu").addEventListener("click", function(event) {
+    if (event.target.tagName === "LI") {
+        document.getElementById("output").textContent =
+            "You clicked: " + event.target.textContent;
+    }
+});
+</script>
+
+</body>
+</html>
